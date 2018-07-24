@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .inner-content
+        #auth
+            form(action='/auth', method='post')
+                h2=__('Авторизация')
+                p: input.form-control(type='text', name='email', placeholder='Email')
+                p: input.form-control(type='password', name='password', placeholder=__('Пароль'))
+                p
+                    button.btns(type='button')=__('Войти')
+                    a.btn.btn-default(href='/access')=__('Забыли пароль?')
+                .container-msg
+
+
+            form(action='/register', method='post')
+                h2=__('Регистрация')
+                p: input.form-control(type='text', name='email', placeholder='Email')
+                p: input.form-control(type='password', name='password', placeholder=__('Пароль'))
+                //-p: input.form-control(type='password', name='confirm_password', placeholder=__('Повтор пароля'))
+                p: .g-recaptcha(data-sitekey=config.reCaptchaPub)
+                p: button.btns(type='button')=__('Отправить')
+                .container-msg

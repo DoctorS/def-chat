@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .inner-content
+    .Access
+      h1= title
+      form(action='/access', method='post')
+        .form-group
+          input.form-control(type='password', name='password', placeholder=__('Новый пароль'))
+        .form-group
+          input.form-control(type='password', name='confirm_password', placeholder=__('Повтор нового пароля'))
+        .form-group
+          button.btns(type='button')=__('Сохранить')
+        .info.alert.alert-danger

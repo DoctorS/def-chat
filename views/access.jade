@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .inner-content
+    .Access
+      h1= title
+      form(action='/access', method='post')
+        .form-group
+          input.form-control(type='text', name='email', placeholder='Email')
+        .form-group
+          .g-recaptcha(data-sitekey=config.reCaptchaPub)
+        .form-group
+          button.btns(type='button')=__('Отправить')
+        .container-msg
