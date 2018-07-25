@@ -1,9 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export default () => {
-    return (
-        <footer className="footer">
-            {new Date().getFullYear()} &copy;  site.com
-        </footer>
-    );
+  return <footer className="footer">{new Date().getFullYear()} &copy; site.com</footer>;
 };

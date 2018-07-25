@@ -1,0 +1,31 @@
+.agencies .agency {
+  width: calc(20% - 4px);
+  height: 112px;
+  overflow: hidden;
+  padding: 5px;
+  margin: 0 4px 4px 0;
+  outline: 1px solid #ccc;
+  float: left;
+}
+.agencies .agency .name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.agencies .agency .site a {
+  color: #d42a28;
+}
+.agencies .agency div,
+.agencies .agency p {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .agencies .agency {
+    width: calc(33.33% - 4px);
+  }
+}
+@media (max-width: 490px) {
+  .agencies .agency {
+    width: calc(50% - 4px);
+  }
+}

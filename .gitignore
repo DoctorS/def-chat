@@ -6,3 +6,5 @@ front-app/package-lock.json
 front-app/yarn.lock
 public
 locales
+__*
+
