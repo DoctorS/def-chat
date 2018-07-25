@@ -5,6 +5,7 @@ package-lock.json
 front-app/package-lock.json
 front-app/yarn.lock
 public
+!front-app/public
 locales
 __*
 
