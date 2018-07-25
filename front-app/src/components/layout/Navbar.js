@@ -35,6 +35,7 @@ class Navbar extends Component {
       })
       .catch(e => {
         if (localStorage) localStorage.username = "";
+        this.props.setCurrentUser({ username: "" });
         console.log(e);
       });
   }
