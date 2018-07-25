@@ -1,7 +1,7 @@
-const express = require('express'),
-    router = express.Router(),
-    page = require('./page'),
-    user = require('./user')
+const express = require("express"),
+  router = express.Router(),
+  page = require("./page"),
+  user = require("./user");
 
 // pages
 // router.get('/', page.index)
@@ -24,9 +24,9 @@ const express = require('express'),
 // // settings
 // router.post('/lang', user.lang)
 
-router.post('/register-test', user.registerTest)
-router.post('/auth-test', user.authTest)
-router.post('/is-auth', user.isAuthTest)
-router.post('/logout', user.logout)
+router.post("/register-test", user.registerTest);
+router.post("/auth-test", user.authTest);
+router.post("/is-auth", user.isAuthTest);
+router.post("/logout", user.logout);
 
-module.exports = router
+module.exports = router;

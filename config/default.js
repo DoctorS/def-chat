@@ -12,7 +12,7 @@ let settings = {
   cookieRefAge: 60 * 60 * 24 * 30,
   reCaptchaPub: "###",
   reCaptchaPriv: "###",
-  dbName: "test-db",
+  dbName: "def-chat",
   dbPort: 27017,
   payPalKey: "###",
   defaultLang: "ru",

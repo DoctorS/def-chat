@@ -2,3 +2,4 @@
 prettier --write ./front-app/src/*.js
 prettier --write ./front-app/src/*/*.js
 prettier --write ./front-app/src/*/*/*.js
+prettier --write ./routes/*.js
