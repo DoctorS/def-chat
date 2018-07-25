@@ -40,9 +40,11 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav>
+            <nav className="top-menu">
                 <ul>
-                    <li><NavLink to="/">Home</NavLink></li>
+                    <li>
+                        <NavLink exact to="/">Home</NavLink>
+                    </li>
                     {this.props.username && (
                         <li>
                             <NavLink to="/profile">
@@ -57,7 +59,7 @@ class Navbar extends Component {
                     )}
                     {!this.props.username && (
                         <li>
-                            <NavLink to="/register" >
+                            <NavLink to="/register">
                                 Sign Up
                             </NavLink>
                         </li>

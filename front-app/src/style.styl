@@ -4,72 +4,97 @@
   box-sizing border-box
   outline none
 
+html, body, #root, .App
+  width: 100%
+  height: 100%
+
 body
-  padding: 15px 50px
   font 13px / 16px Helvetica Neue, Tahoma, Arial, sans-serif
   color #222
 
-h1, h2, h3
-  font bold 18px / 24px Helvetica Neue, Tahoma, Arial, sans-serif
-
-h1, h2, h3, div, p
-  margin-bottom: 10px
-
 a
-  color blue
+  color #1B4D69
+
+.App
+  display flex
+  flex-direction column
+  min-height 100%
+  h1, h2, h3
+    font 700 16.5px / 24px Helvetica Neue, Tahoma, Arial, sans-serif
+    margin-bottom: 15px
+  div, p
+    margin-bottom: 12px
 
 .Container
-  padding: 20px 0
+  padding: 20px 15px
+  flex 1 auto
 
 .footer
+  height: 36px
+  line-height: 36px
+  overflow hidden
   background #ccc
-  padding: 10px
+  padding: 0 15px
   color: #666
-  background: linear-gradient(#e6e5e5, #a09e9e)
-  border-radius 3px
 
-nav
+nav.top-menu
+  height: 36px
+  overflow hidden
   ul
     width: 100%
+    height: 36px
+    overflow hidden
     display inline-block
-    background #3F51B5
-    background: linear-gradient(#2196F3, #3F51B5)
-    border-radius 3px
+    background #1B4D69
   li
     float: left
     list-style none
     > a
-      padding: 0 10px
-      font-size 14px
-      line-height: 50px
+      padding: 0 15px
+      font-size 11px
+      text-transform uppercase
+      line-height: 36px
       display block
       color #fff
       text-decoration none
-    //> a.active
-    //  color: #89d1e8
+  li.active
+    background #ffffff
+    a
+      color #1B4D69
+  li:nth-child(1)
+    background #d42a28
 
 button
   cursor: pointer
-  line-height: 20px
+  line-height: 34px
   text-align center
-  padding: 0 20px
+  padding: 0 14px
   user-select none
   margin-bottom: 15px
+  min-width 100px
+  background #1B4D69
+  color #fff
+  border none
+  text-transform uppercase
+  font-size 11px
 
 button:hover
-  background #beb8b9
+  background: #164763
 
 button:active
-  background #a09e9e
+  position: relative
+  top: 1px
+  background #164763
 
 input
-  padding: 0 6px
-
-input, button
-  line-height: 24px
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 34px
   font-size 14px
-  border 1px solid #ccc
-  border-radius 3px
+
+input:focus
+  border-color: #268bd2
 
 .error,
 .invalid-feedback

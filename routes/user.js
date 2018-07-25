@@ -335,7 +335,7 @@ module.exports.referrer = (req, res, next) => {
 
 module.exports.authTest = (req, res, next) => {
     db.User.findOne({email: req.body.email}).then(user => {
-        if (!user || !user.checkPassword(req.body.password)) return res.status(400).send({auth: res.__('Авторизация не прошла.')})
+        if (!user || !user.checkPassword(req.body.password)) return res.status(403).send({auth: res.__('Авторизация не прошла.')})
         req.session.user = user._id
         res.send({username: user.email})
     }).catch(e => {
@@ -354,10 +354,10 @@ module.exports.registerTest = (req, res, next) => {
     if (!req.body.password || req.body.password.length < 6) errors.password = 'Password must be at least 6 characters'
     if (!req.body.password2) errors.password2 = 'Confirm Password field is required'
     if (req.body.password !== req.body.password2) errors.reg = 'Passwords must match'
-    if (Object.keys(errors).length) return res.status(400).send(errors)
+    if (Object.keys(errors).length) return res.status(403).send(errors)
     db.User.findOne({email: req.body.email})
         .then(user => {
-            if (user) return res.status(400).send({reg: res.__('Емейл адрес уже зарегистрирован.')})
+            if (user) return res.status(403).send({reg: res.__('Емейл адрес уже зарегистрирован.')})
             user = new db.User({
                 email: req.body.email,
                 password: req.body.password

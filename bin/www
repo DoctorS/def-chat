@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('it-chat.ru:server');
+var debug = require('debug')('def-chat:server');
 var http = require('http');
 
 /**
