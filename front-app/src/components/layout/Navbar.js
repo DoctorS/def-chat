@@ -33,7 +33,10 @@ class Navbar extends Component {
       .then(r => {
         this.props.setCurrentUser({ username: r.data.username ? r.data.username : "" });
       })
-      .catch(console.log);
+      .catch(e => {
+        if (localStorage) localStorage.username = "";
+        console.log(e);
+      });
   }
 
   render() {
